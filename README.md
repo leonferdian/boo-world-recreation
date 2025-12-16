@@ -1,8 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Boo World Recreation
+
+This is a pixel-perfect recreation of a question page from boo.world, built with Next.js and Tailwind CSS. The project was completed in approximately 2 hours with comprehensive improvements and full functionality.
+
+## Features
+
+- Responsive layout with sidebar navigation (80px minimized / 256px expanded)
+- Question display with tags and engagement metrics
+- Comments section with user avatars and interactions
+- Related posts grid with proper alignment
+- Dark theme with smooth animations and glowing effects
+- Universes card with 34 categories and soul counts
+- SignInModal popup covering entire page
+- All buttons functional with links to original Boo.world
+- Official Boo.world favicon
+- App store links (Google Play & Apple App Store) with UTM parameters
+
+## Tech Stack
+
+- Next.js (Pages Router)
+- React 18
+- Tailwind CSS
+- Lucide Icons
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -10,31 +43,69 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- `/components` - Reusable UI components
+- `/lib` - Mock data and utilities
+- `/pages` - Application routes and API endpoints
+- `/public` - Static assets
+- `/styles` - Global styles and Tailwind configuration
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Improvements & Features
 
-## Learn More
+### Core Improvements Made (2-hour development)
 
-To learn more about Next.js, take a look at the following resources:
+**Layout & Design**
+- Fixed responsive sidebar with smooth transitions (80px minimized / 256px expanded)
+- Implemented proper three-column layout with Universes card between sidebar and question
+- Fixed all offset and alignment issues in question card and related posts
+- Added proper spacing and flex utilities to prevent layout shifts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+**Universes System**
+- Complete Universes card with all 34 categories from original Boo.world
+- Proper hashtag formatting with icons and soul counts
+- Scrollable content with gradient mask effect
+- All universe buttons link to `https://boo.world/u/{universe}`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Interactive Components**
+- SignInModal popup covering entire page with z-index fix
+- Three sign-in options (Apple, Google, Email) linking to signup page
+- Header SIGN IN button and QuestionCard JOIN NOW button trigger modal
+- Glowing button animations using CSS keyframes
 
-## Deploy on Vercel
+**Navigation & Links**
+- All buttons functional with proper links to original Boo.world
+- Google Play link: `https://play.google.com/store/apps/details?id=enterprises.dating.boo&utm_source=website&utm_medium=owned&utm_campaign=websiteandroid`
+- Apple App Store link configured
+- Universe buttons, navigation, and action buttons all link to correct URLs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Styling & Theme**
+- Dark theme with cyan accents matching original design
+- Official Boo.world favicon: `https://boo.world/icon.png`
+- Proper hover states and transitions
+- Responsive breakpoints for mobile, tablet, and desktop
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+**Data & Content**
+- Updated mockData.js with complete universe list (34 categories)
+- Added user profiles with avatars, personality types, zodiac signs
+- Proper comment structure with likes, replies, and GIFs
+- Related posts with correct engagement metrics
+
+**Technical Fixes**
+- Fixed hydration and runtime errors in components
+- Proper client-side number formatting with toLocaleString
+- Image error handling with fallback initials
+- Proper z-index layering for modal overlay
+
+## Deployment
+
+This project can be deployed on Vercel, Netlify, or any other platform that supports Next.js applications.
+
+## License
+
+MIT
